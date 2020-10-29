@@ -5,6 +5,11 @@ import numpy as np
 def convolution(A,B):
     C = np.zeros((A.shape[0] - 2,A.shape[1] - 2))
     contador = 0
+    sum = 0
+    for i in range C.shape[0]:
+        for j in range C.shape[1]:
+            while True: 
+                sum += 
     
     return C #convolution matrix
 
