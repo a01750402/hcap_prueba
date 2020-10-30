@@ -11,7 +11,7 @@ def padding_conv(A,B):
     for i in range(1,len(zero) -1):
         for j in range(1,len(zero[0]) -1):
             zero[i][j] = A[i-1][j-1]
-    print(zero)
+   # print(zero) Esta parte era para ir probando el código
 
 
 
@@ -28,16 +28,16 @@ def padding_conv(A,B):
 
 
     return C
-matrix = [[1,0,0.5,0.5],[0,0.5,1,0],[0,1,0.5,1],[1,0.5,0.5,1]]
-A = np.array(matrix)
-filtro = [[1,0],[0,0.5]]
-B = np.array(filtro)
-print(padding_conv(A,B))
+#matrix = [[1,0,0.5,0.5],[0,0.5,1,0],[0,1,0.5,1],[1,0.5,0.5,1]] Caso prueba 
+#A = np.array(matrix)
+#filtro = [[1,0],[0,0.5]]
+#B = np.array(filtro)
+#print(padding_conv(A,B))
 imagen = cv2.imread('imagen.jpg')
 imagen = cv2.cvtColor(imagen,cv2.COLOR_BGR2GRAY)
-kernel = [[1,1,1],[1,0,1],[1,1,1]]
+kernel = [[1,1,1],[1,0,1],[1,1,1]] #filtro
 K = np.array(kernel)
-print(padding_conv(imagen,K))
+#print(padding_conv(imagen,K))
 cv2.imwrite('imagenpruebapadding.jpg',padding_conv(imagen,K))
 masterchief = cv2.imread('halo2masterchief.jpg') 
 masterchief = cv2.cvtColor(masterchief,cv2.COLOR_BGR2GRAY)
