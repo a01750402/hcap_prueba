@@ -32,7 +32,7 @@ print(A)
 print(A[1][0]) 
 print(convolution(A,B))
 imagen  = cv2.imread('imagen.jpg')
-imagen = cv2.cvtColor(imagen,cv2.COLOR_BGR2RGB)
+#imagen = cv2.cvtColor(imagen,cv2.COLOR_BGR2RGB)
 filtro = [[1,1,1],[1,0,1],[1,1,1]]
 F = np.array(filtro)
 im = cv2.cvtColor(imagen,cv2.COLOR_BGR2GRAY)
