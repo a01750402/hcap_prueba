@@ -31,9 +31,15 @@ print(convolution(D,E))
 print(A)
 print(A[1][0]) 
 print(convolution(A,B))
-im = cv2.imread('imagen.jpg')
+imagen  = cv2.imread('imagen.jpg')
+imagen = cv2.cvtColor(imagen,cv2.COLOR_BGR2RGB)
 filtro = [[1,1,1],[1,0,1],[1,1,1]]
 F = np.array(filtro)
-
+im = cv2.cvtColor(imagen,cv2.COLOR_BGR2GRAY)
 cv2.imwrite('imagenpruebaconv.jpg',convolution(im,F))
+Matrix = [[10,4,50,30,20],[80,0,0,0,6],[0,0,1,16,17],[0,1,0,7,23],[1,0,6,0,4]]
+m1 = np.array(Matrix)
+filtro1 = [[1,0,1],[0,0,0],[1,0,3]]
+f1 = np.array(filtro1)
 
+print(convolution(m1,f1))
