@@ -21,8 +21,8 @@ def padding_conv(A,B):
             for iaux in range(len(B)):
                 for jaux in range(len(B[0])):
                     suma += zero[i+iaux][j+jaux]*B[iaux][jaux]
-                    if suma > 255:
-                        suma = 255
+                    if suma > 155:
+                        suma = 155
             C[i][j] = suma
  
 

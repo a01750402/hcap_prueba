@@ -1,4 +1,5 @@
 import numpy as np
+import cv2
 
 
 #funcion que calcula la matriz resultante C después de aplicar la operacion de convolucion de A*B
@@ -30,3 +31,9 @@ print(convolution(D,E))
 print(A)
 print(A[1][0]) 
 print(convolution(A,B))
+im = cv2.imread('imagen.jpg')
+filtro = [[1,1,1],[1,0,1],[1,1,1]]
+F = np.array(filtro)
+
+cv2.imwrite('imagenpruebaconv.jpg',convolution(im,F))
+
