@@ -39,4 +39,7 @@ kernel = [[1,1,1],[1,0,1],[1,1,1]]
 K = np.array(kernel)
 print(padding_conv(imagen,K))
 cv2.imwrite('imagenpruebapadding.jpg',padding_conv(imagen,K))
+masterchief = cv2.imread('halo2masterchief.jpg') 
+masterchief = cv2.cvtColor(masterchief,cv2.COLOR_BGR2GRAY)
+cv2.imwrite('masterchief_padding.jpg',padding_conv(masterchief,K))
 
