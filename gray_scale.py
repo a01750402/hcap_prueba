@@ -9,11 +9,12 @@ def grb_2_gray(image):
             sum = 0
             for iaux in range(3):
                 sum += image[i][j][iaux]
-        sum = (sum)/3
-        gray_im[i][j] = sum
+            sum = (sum)/3
+            gray_im[i][j] = sum
     return gray_im
 imagen = cv2.imread('imagen.jpg')
-#print(grb_2_gray(imagen))
+print(imagen)
+print(grb_2_gray(imagen))
 cv2.imwrite('prueba_grb_2_gray.jpg',grb_2_gray(imagen))
 
 
