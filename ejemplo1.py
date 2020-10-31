@@ -2,8 +2,9 @@ import numpy as np
 import cv2
 imagen = cv2.imread('imagen.jpg')
 imagen = cv2.cvtColor(imagen, cv2.COLOR_BGR2RGB)
-print(imagen.shape)
-print(imagen[0][0])
+print("ojo",imagen.shape)
+print("aquí",imagen[0][1][0]+10)
+print(imagen)
 imagen = cv2.resize(imagen,(256,256))
 
 cv2.imwrite('reziseimage.jpg',imagen)
@@ -12,10 +13,11 @@ imagen = cv2.imread('imagen.jpg')
 imagen = cv2.cvtColor(imagen,cv2.COLOR_BGR2GRAY)
 print(imagen.shape)
 print(imagen[0][0])
+print("ojo aquí",imagen[0][1])
 
-imagen[0][0] = 0 ;
-imagen [0][1] = 0;
-imagen[0][2] = 0;
+imagen[0][0] = 0 
+imagen [0][1] = 0
+imagen[0][2] = 0
 
 
 cv2.imwrite('grayimagen.jpg',imagen)
