@@ -14,7 +14,7 @@ def grb_2_gray(image):
     return gray_im
 imagen = cv2.imread('imagen.jpg')
 #print(grb_2_gray(imagen))
-cv2.imwrite('prueba_grb_2_gray.jpg',imagen)
+cv2.imwrite('prueba_grb_2_gray.jpg',grb_2_gray(imagen))
 
 
 
